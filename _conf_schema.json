@@ -1,0 +1,45 @@
+{
+  "cli_mode": {
+    "description": "flyai CLI 调用方式",
+    "type": "string",
+    "options": ["auto", "flyai", "npx"],
+    "default": "auto",
+    "hint": "auto = 优先用 PATH 里的 flyai，找不到再用 npx 临时拉取；flyai = 只用已安装的；npx = 强制走 npx"
+  },
+  "cli_path": {
+    "description": "flyai 可执行文件绝对路径",
+    "type": "string",
+    "default": "",
+    "hint": "留空自动探测。Docker 里 node 不在 PATH 时，在这里写死路径，例如 /usr/local/bin/flyai"
+  },
+  "api_key": {
+    "description": "FLYAI_API_KEY（可选）",
+    "type": "string",
+    "default": "",
+    "secret": true,
+    "hint": "不填也能用。但不填时飞猪会把价格打码成 ¥8xx、2x 这种区间价，填了才能拿到精确价格"
+  },
+  "timeout": {
+    "description": "单次查询超时（秒）",
+    "type": "int",
+    "default": 90,
+    "hint": "飞猪的 ai-search 接口本身较慢，实测 15~40 秒，不建议低于 60"
+  },
+  "max_items": {
+    "description": "每条消息最多展示几条结果",
+    "type": "int",
+    "default": 5,
+    "hint": "QQ 群消息太长会被折叠，建议 5~8"
+  },
+  "enable_llm_tool": {
+    "description": "注册 LLM 工具",
+    "type": "bool",
+    "default": true,
+    "hint": "开启后模型会自己判断什么时候该查飞猪，用户不用发指令；关掉则只能用指令查"
+  },
+  "show_price_note": {
+    "description": "价格被打码时追加提示",
+    "type": "bool",
+    "default": true
+  }
+}

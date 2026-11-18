@@ -1,0 +1,3 @@
+# 本插件只用 Python 标准库，无需第三方依赖。
+# flyai CLI 通过 npm 安装，不在这里声明：
+#   npm i -g @fly-ai/flyai-cli

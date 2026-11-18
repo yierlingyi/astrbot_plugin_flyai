@@ -1,0 +1,22 @@
+name: astrbot_plugin_flyai
+display_name: 飞猪旅行助手
+short_desc: 在聊天里直接查机票、酒店、火车票和景点，数据实时来自飞猪。
+desc: |
+  基于飞猪官方 flyai MCP 的旅行查询插件。
+
+  覆盖 8 个底层能力：语义搜索、关键词搜索、机票、火车票、酒店、景点、万豪系酒店、万豪套餐。
+  所有价格与库存直连飞猪供应链，结果自带飞猪下单短链，点开即可跳转 App 完成支付。
+
+  指令：/飞猪 /机票 /火车 /酒店 /景点 /飞猪帮助
+  同时注册了 3 个 LLM 工具，开启后模型会自己判断什么时候该查飞猪。
+
+  注意：插件只做查询，不代下单。
+version: 1.0.0
+author: WorkBuddy
+repo: https://github.com/yierlingyi/astrbot_plugin_flyai
+astrbot_version: ">=4.5.1"
+tags:
+  - 旅行
+  - 机票
+  - 酒店
+  - 飞猪
